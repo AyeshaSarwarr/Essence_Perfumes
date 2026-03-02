@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useCart } from "../context/cartContext";
 
 function Header() {
-  
+  const [menuOpen, setMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { count } = useCart();
   const navigate = useNavigate();
@@ -89,6 +89,15 @@ function Header() {
             )}
           </div>
 
+            <button 
+            className="md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
           {/* Cart Icon */}
           <Link to="/cart" className="relative group">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-gray-800 group-hover:text-black transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -102,6 +111,43 @@ function Header() {
           </Link>
         </div>
       </div>
+      <div className={`md:hidden bg-white border-b border-gray-200 shadow-md transition-all duration-300 overflow-hidden ${
+  menuOpen ? "max-h-100 py-6" : "max-h-0"
+}`}>
+  <div className="md:hidden bg-white border-b border-gray-200 shadow-md">
+    <div className="flex flex-col px-8 py-6 gap-6 text-lg">
+      
+      {["Home", "Collection", "About", "Contact"].map((item) => (
+        <NavLink
+          key={item}
+          to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+          onClick={() => setMenuOpen(false)}
+          className="text-gray-700 hover:text-black transition"
+        >
+          {item}
+        </NavLink>
+      ))}
+
+      <hr />
+
+      {isLoggedIn ? (
+        <button 
+          onClick={handleLogout}
+          className="text-red-500 text-left"
+        >
+          Logout
+        </button>
+      ) : (
+        <>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/signup">Sign Up</NavLink>
+        </>
+      )}
+      
+    </div>
+  </div>
+
+</div>
     </header>
   );
 }

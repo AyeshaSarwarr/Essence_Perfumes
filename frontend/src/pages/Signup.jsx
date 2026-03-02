@@ -42,7 +42,7 @@ function Signup() {
 };
 
   return (
-    <div className="min-h-screen flex items-center justify-center ">
+    <div className="md:min-h-screen flex items-center justify-center mx-10 my-20">
       
       <div className="backdrop-blur-lg bg-white/30 shadow-2xl rounded-3xl p-10 w-105 border border-white/40">
         

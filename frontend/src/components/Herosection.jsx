@@ -1,8 +1,8 @@
 
 function Herosection() {
   return (
-    <section className="relative h-[70vh] overflow-hidden">
-        <video className="absolute h-[60vh] md:h-[70vh] w-full object-cover opacity-70 z-0 flex items-center justify-center " poster="/perfume.jpg" autoPlay loop controls={false} muted playsInline
+    <section className="relative md:h-[70vh] overflow-hidden">
+        <video className="absolute h-[40vh] md:h-[70vh] w-full object-cover opacity-70 z-0 flex items-center justify-center " poster="/perfume.jpg" autoPlay loop controls={false} muted playsInline
         preload="metadata">
             <source src="perfumeSmell.mp4" type="video/mp4" /> Your browser does not support the video tag.
         </video>

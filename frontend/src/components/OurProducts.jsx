@@ -65,7 +65,7 @@ const addToCart = (productId) => {
 
   return (
     <div className="container mx-auto">
-      <div className="flex flex-wrap items-center gap-10 my-10">
+      <div className="flex flex-wrap items-center md:gap-10 gap-4 my-10">
         {perfumes.map((perfume) => (
           <div 
             key={perfume.id} 
@@ -74,7 +74,7 @@ const addToCart = (productId) => {
             <img 
               src={`/images/${perfume.picture_url}`} 
               alt={perfume.name} 
-              className="md:h-[30vh] w-full object-cover rounded-2xl"
+              className="md:h-[30vh] h-[15vh] md:w-full w-[32vw] object-cover rounded-2xl"
             />
             <h1 className="text-xl font-bold">{perfume.name}</h1>
             <p className="text-lg text-gray-700">Rs {perfume.price}</p>
