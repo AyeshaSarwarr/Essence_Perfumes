@@ -35,11 +35,17 @@ app.use("/orders", OrdersRoutes)
 app.use("/order-items", OrderItemsRoutes)
 app.use("/cart", CartRoutes)
 
+
+app.get('/', (req, res) => {
+  res.send('API is running!');
+});
+
 app.use((req, res) => {
     res.status(404).json({ message: "Route not found" });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(3000, () => console.log('Server running on port 3000'));
+}
+
+module.exports = app;
