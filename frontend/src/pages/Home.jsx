@@ -9,7 +9,7 @@ function Home() {
 
         <div className="flex justify-center flex-col items-center">
           <OurProducts limit={3}/>
-          <button className="bg-black text-white  rounded-full hover:scale-105 transition w-[45vw] h-[5vh] duration-300">View All Products</button>
+          <button className="bg-black text-white  rounded-full hover:scale-105 transition w-[45vw] h-[5vh] duration-300 md:w-[20vw]">View All Products</button>
         </div>
 
           <div className=' md:m-20 my-10 mx-5 flex gap-8 md:items-center '>
@@ -19,10 +19,10 @@ function Home() {
             <source src="AboutVideo.mp4" type="video/mp4" /> Your browser does not support the video tag.
           </video>
 
-          <p className='md:text-base/8 text-sm'>Luxury is not just a word — it is our signature. We are dedicated to creating premium fragrances that embody elegance, sophistication, and timeless charm. Every scent we offer is carefully crafted to deliver depth, richness, and lasting impression.
+          <p className='md:text-base/8 text-sm md:m-10'>Luxury is not just a word — it is our signature. We are dedicated to creating premium fragrances that embody elegance, sophistication, and timeless charm. Every scent we offer is carefully crafted to deliver depth, richness, and lasting impression.
 
           <span className="hidden lg:block">
-            <br/><br/>
+            <br/>
             We select only high-quality ingredients and blend them with precision to create perfumes that evolve beautifully throughout the day. Our creations are designed for those who appreciate refinement, exclusivity, and the art of fine perfumery.<br/><br/>
 
           For us, fragrance is an experience — a silent statement of confidence and class. With every bottle, we invite you to indulge in true luxury and leave a lasting impression wherever you go.
