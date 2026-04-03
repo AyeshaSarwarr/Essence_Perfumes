@@ -34,7 +34,7 @@ function Cart() {
       const responses = await Promise.all(requests);
       setPerfumes(responses.map(res => res.data));
     } catch (err) {
-      console.error("Fetch error", err);
+      // console.error("Fetch error", err);
     } finally {
       setLoading(false);
     }
@@ -77,9 +77,9 @@ function Cart() {
         { headers: { Authorization: `Bearer ${token}` } } 
       );
       
-      console.log("Database cart updated successfully");
+      // console.log("Database cart updated successfully");
     } catch (err) {
-      console.error("Cart sync failed:", err);
+      // console.error("Cart sync failed:", err);
     }
   }
 

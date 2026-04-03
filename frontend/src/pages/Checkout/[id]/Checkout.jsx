@@ -78,7 +78,9 @@ function Checkout() {
       try {
         const decoded = jwtDecode(token);
         currentUserId = decoded.id;
-      } catch (err) { console.error("Token error", err); }
+      } catch (err) { 
+        // console.error("Token error", err); 
+      }
     }
 
     try {

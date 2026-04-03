@@ -73,7 +73,7 @@ function Header() {
             {isLoggedIn ? (
               <button 
                 onClick={handleLogout}
-                className="text-red-500 hover:text-red-700 font-medium transition cursor-pointer"
+                className="text-red-700 hover:text-red-800 font-medium transition cursor-pointer"
               >
                 Logout
               </button>
@@ -92,6 +92,7 @@ function Header() {
             <button 
             className="md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />

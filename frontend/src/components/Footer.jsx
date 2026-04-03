@@ -27,7 +27,7 @@ function Footer() {
 
           {/* Links Column */}
           <div className="flex flex-col gap-8">
-            <h2 className="text-[10px] uppercase tracking-[0.4em] font-bold text-zinc-500">
+            <h2 className="text-[10px] uppercase tracking-[0.4em] font-bold text-zinc-300">
               Explore
             </h2>
             <ul className="flex flex-col gap-4">
@@ -46,7 +46,7 @@ function Footer() {
 
           {/* Contact & Socials */}
           <div className="flex flex-col gap-8">
-            <h2 className="text-[10px] uppercase tracking-[0.4em] font-bold text-zinc-500">
+            <h2 className="text-[10px] uppercase tracking-[0.4em] font-bold text-zinc-300">
               Connect
             </h2>
             <div className="flex flex-col gap-4">
@@ -57,7 +57,7 @@ function Footer() {
                 {['Instagram', 'Facebook', 'Twitter'].map((social) => (
                   <button 
                     key={social} 
-                    className="text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-white transition-all"
+                    className="text-[10px] uppercase tracking-[0.2em] text-zinc-300 hover:text-white transition-all"
                   >
                     {social}
                   </button>
@@ -69,14 +69,14 @@ function Footer() {
 
         {/* The Luxury "Signature" Line */}
         <div className="relative py-8 border-t border-zinc-500/50 flex flex-col md:flex-row justify-between items-center gap-6">
-          <span className="text-[10px] text-zinc-600 uppercase tracking-[0.3em]">
+          <span className="text-[10px] text-zinc-400 uppercase tracking-[0.3em]">
             &copy; {currentYear} Essence Perfumes &bull; All Rights Reserved
           </span>
           
           <div className="flex gap-10">
-             <span className="text-[9px] text-zinc-400 uppercase tracking-[0.5em] hover:text-zinc-50 transition-colors cursor-default">Lahore</span>
-             <span className="text-[9px] text-zinc-400 uppercase tracking-[0.5em] hover:text-zinc-50 transition-colors cursor-default">Paris</span>
-             <span className="text-[9px] text-zinc-400 uppercase tracking-[0.5em] hover:text-zinc-50 transition-colors cursor-default">London</span>
+             <span className="text-[9px] text-zinc-300 uppercase tracking-[0.5em] hover:text-zinc-50 transition-colors cursor-default">Lahore</span>
+             <span className="text-[9px] text-zinc-300 uppercase tracking-[0.5em] hover:text-zinc-50 transition-colors cursor-default">Paris</span>
+             <span className="text-[9px] text-zinc-300 uppercase tracking-[0.5em] hover:text-zinc-50 transition-colors cursor-default">London</span>
           </div>
         </div>
       </div>
