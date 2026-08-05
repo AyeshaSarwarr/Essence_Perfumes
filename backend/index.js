@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express')
 const cors = require('cors')
+const { track } = require('@vercel/analytics/server')
 
 const app = express()
 
@@ -22,6 +23,23 @@ app.use(cors({
 
 // app.use(cors())
 app.use(express.json())
+
+// Vercel Analytics - Track API requests
+app.use(async (req, res, next) => {
+  try {
+    // Track the API request
+    await track('api_request', {
+      path: req.path,
+      method: req.method
+    }, {
+      headers: req.headers
+    });
+  } catch (error) {
+    // Don't let analytics errors break the API
+    console.error('Analytics tracking error:', error);
+  }
+  next();
+});
 
 const PerfumesRoutes = require("./routes/PerfumesRoutes")
 const UsersRoutes = require("./routes/UsersRoutes")
